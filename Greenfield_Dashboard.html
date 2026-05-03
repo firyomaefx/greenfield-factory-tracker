@@ -11,18 +11,18 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  background: #f0faf5;
-  color: #1d1d1f;
+  background: #f5f6f7;
+  color: #1a1a1a;
   line-height: 1.47059;
   letter-spacing: -0.022em;
 }
 
 header {
-  background: linear-gradient(135deg, #0d2b1d 0%, #1a5c32 50%, #1a8a4a 100%);
-  color: white;
+  background: linear-gradient(135deg, #0a1a11 0%, #122b1e 50%, #1b3b2b 100%);
+  color: #e0e5e1;
   padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 32px rgba(13,43,29,0.15);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
   position: relative;
   overflow: hidden;
 }
@@ -30,11 +30,9 @@ header {
 header::after {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.04) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -207,18 +205,18 @@ header p {
 }
 
 .location-kulim {
-  background: linear-gradient(135deg, #0d6432, #107542);
-  box-shadow: 0 2px 8px rgba(13,100,50,0.25);
+  background: #1b3b2b;
+  color: #c8d8ce;
 }
 
 .location-batu {
-  background: linear-gradient(135deg, #0033aa, #0055cc);
-  box-shadow: 0 2px 8px rgba(0,51,170,0.25);
+  background: #162544;
+  color: #c0cee4;
 }
 
 .location-bayan {
-  background: linear-gradient(135deg, #b85c00, #d47a00);
-  box-shadow: 0 2px 8px rgba(184,92,0,0.25);
+  background: #3d2a15;
+  color: #ebd8c0;
 }
 
 .project-meta {
@@ -226,14 +224,14 @@ header p {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
   padding: 1rem 1.5rem;
-  background: #f0faf5;
+  background: #f0f1f2;
 }
 
 .meta-item { text-align: center; }
 
 .meta-item .label {
   font-size: 0.7rem;
-  color: #86868b;
+  color: #787880;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.2rem;
@@ -242,17 +240,17 @@ header p {
 .meta-item .value {
   font-size: 1rem;
   font-weight: 600;
-  color: #1d1d1f;
+  color: #1a1a1a;
 }
 
 .project-latest {
   padding: 1rem 1.5rem;
-  background: linear-gradient(90deg, rgba(26,138,74,0.06), transparent);
-  border-left: 3px solid #1a8a4a;
+  background: linear-gradient(90deg, rgba(18,43,30,0.05), transparent);
+  border-left: 3px solid #1b3b2b;
   margin: 0 1.5rem 1rem;
   border-radius: 0 8px 8px 0;
   font-size: 0.88rem;
-  color: #555;
+  color: #333;
 }
 
 /* Tables */
@@ -263,8 +261,8 @@ header p {
 }
 
 .milestone-table th {
-  background: linear-gradient(135deg, #0d2b1d, #1a5c32);
-  color: white;
+  background: #1a1a1a;
+  color: #f0f0f0;
   padding: 0.8rem;
   text-align: left;
   font-size: 0.82rem;
@@ -274,14 +272,14 @@ header p {
 
 .milestone-table td {
   padding: 0.7rem 0.8rem;
-  border-bottom: 1px solid rgba(26,92,50,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
   font-size: 0.82rem;
 }
 
-.status-completed { color: #107542; font-weight: 600; }
-.status-planned { color: #d47a00; font-weight: 600; }
-.status-delayed { color: #c0392b; font-weight: 600; }
-.status-in-progress { color: #0055cc; font-weight: 600; }
+.status-completed { color: #1b5e2e; font-weight: 600; }
+.status-planned { color: #8a5a00; font-weight: 600; }
+.status-delayed { color: #8a1a1a; font-weight: 600; }
+.status-in-progress { color: #1a3a7a; font-weight: 600; }
 
 /* Risk */
 .risk-table {
@@ -291,8 +289,8 @@ header p {
 }
 
 .risk-table th {
-  background: linear-gradient(135deg, #5c1010, #8b2020);
-  color: white;
+  background: #2a1010;
+  color: #f0c8c8;
   padding: 0.8rem;
   text-align: left;
   font-size: 0.82rem;
@@ -302,7 +300,7 @@ header p {
 
 .risk-table td {
   padding: 0.7rem 0.8rem;
-  border-bottom: 1px solid rgba(139,32,32,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
   font-size: 0.82rem;
 }
 
@@ -315,15 +313,15 @@ header p {
   background: rgba(255,255,255,0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(26,92,50,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
   margin-bottom: 0.5rem;
   transition: all 0.15s;
 }
 
 .action-item:hover {
-  border-color: rgba(26,92,50,0.15);
-  box-shadow: 0 2px 8px rgba(13,43,29,0.04);
+  border-color: rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .action-item.completed label {
@@ -336,7 +334,7 @@ header p {
   height: 18px;
   margin-top: 3px;
   cursor: pointer;
-  accent-color: #1a8a4a;
+  accent-color: #1a1a1a;
   flex-shrink: 0;
 }
 
@@ -344,22 +342,24 @@ header p {
 .donation-section {
   margin: 2rem 0;
   padding: 2rem;
-  background: linear-gradient(135deg, #0d2b1d, #1a5c32, #1a8a4a);
+  background: linear-gradient(135deg, #0a1a11, #122b1e, #1b3b2b);
   border-radius: 20px;
-  box-shadow: 0 8px 40px rgba(13,43,29,0.2);
-  color: white;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  color: #e0e5e1;
   text-align: center;
 }
 
 .donation-section h2 {
-  color: white;
+  color: #e0e5e1;
   border-bottom: none;
   margin-top: 0;
 }
 
+.donation-section p { color: #c0c8c3; }
+
 .donation-section a {
   background: white;
-  color: #0d2b1d;
+  color: #1a1a1a;
   padding: 14px 32px;
   border-radius: 28px;
   text-decoration: none;
@@ -371,14 +371,14 @@ header p {
 }
 
 .donation-section a:hover {
-  background: #e0f0e8;
+  background: #e0e0e0;
   transform: scale(1.03);
 }
 
 /* Config button */
 .config-btn {
-  background: linear-gradient(135deg, #1a5c32, #1a8a4a);
-  color: white;
+  background: #1a1a1a;
+  color: #f5f5f5;
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
@@ -391,26 +391,26 @@ header p {
 }
 
 .config-btn:hover {
-  background: linear-gradient(135deg, #0d2b1d, #1a5c32);
+  background: #333333;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(13,43,29,0.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem;
-  color: #86868b;
+  color: #787880;
   font-size: 0.8rem;
   margin-top: 2rem;
-  border-top: 1px solid rgba(26,92,50,0.1);
+  border-top: 1px solid rgba(0,0,0,0.06);
 }
 
 h2 {
-  color: #0d2b1d;
+  color: #111111;
   margin: 2rem 0 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #1a8a4a;
+  border-bottom: 2px solid #1b3b2b;
 }
 
 @media print {
@@ -420,23 +420,23 @@ h2 {
 }
 
 @media (prefers-color-scheme: dark) {
-  body { background: #0a1a12; color: #e8f0ec; }
-  header { background: linear-gradient(135deg, #061410, #0d2b1d, #1a5c32); }
-  .kpi-box { background: rgba(255,255,255,0.06); border-color: rgba(26,92,50,0.2); }
-  .kpi-box h3 { color: #c8f0d8; }
-  .kpi-box p { color: #8aa898; }
-  .project-card { background: rgba(255,255,255,0.05); border-color: rgba(26,92,50,0.15); }
-  .project-title { color: #c8f0d8; }
-  .project-latest { background: rgba(26,138,74,0.08); border-left-color: #1a8a4a; }
-  .controls { background: rgba(255,255,255,0.05); border-color: rgba(26,92,50,0.15); }
-  .action-item { background: rgba(255,255,255,0.05); border-color: rgba(26,92,50,0.12); }
-  h2 { color: #c8f0d8; border-bottom-color: #1a8a4a; }
-  .milestone-table th { background: linear-gradient(135deg, #061410, #0d2b1d); }
-  .milestone-table td { border-bottom-color: rgba(255,255,255,0.05); }
-  .risk-table th { background: linear-gradient(135deg, #3a0808, #5c1010); }
-  .risk-table td { border-bottom-color: rgba(255,255,255,0.05); }
-  .meta-item .value { color: #e8f0ec; }
-  footer { color: #6a8a78; border-top-color: rgba(26,92,50,0.15); }
+  body { background: #0d0d0d; color: #cccccc; }
+  header { background: linear-gradient(135deg, #050a08, #0a1510, #111c15); }
+  .kpi-box { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
+  .kpi-box h3 { color: #e0e0e0; }
+  .kpi-box p { color: #888888; }
+  .project-card { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
+  .project-title { color: #e0e0e0; }
+  .project-latest { background: rgba(255,255,255,0.03); border-left-color: #333; }
+  .controls { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
+  .action-item { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
+  h2 { color: #e0e0e0; border-bottom-color: #333; }
+  .milestone-table th { background: #111; }
+  .milestone-table td { border-bottom-color: rgba(255,255,255,0.04); }
+  .risk-table th { background: #1a0a0a; }
+  .risk-table td { border-bottom-color: rgba(255,255,255,0.04); }
+  .meta-item .value { color: #cccccc; }
+  footer { color: #666666; border-top-color: rgba(255,255,255,0.06); }
 }
 </style>
 </head>

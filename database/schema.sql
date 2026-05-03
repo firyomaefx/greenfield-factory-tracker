@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS news_items (
 );
 
 -- Job listings table (scraped from job sites)
+-- Categories: Operator, Technician, Engineer, Supervisor, Logistics, Admin, IT, Management
 CREATE TABLE IF NOT EXISTS jobs (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   company_id UUID REFERENCES companies(id) ON DELETE CASCADE,
@@ -64,7 +65,9 @@ CREATE TABLE IF NOT EXISTS jobs (
   job_url TEXT NOT NULL,
   source TEXT DEFAULT 'Unknown',
   location TEXT,
+  category TEXT DEFAULT 'Uncategorized' CHECK (category IN ('Operator', 'Technician', 'Engineer', 'Supervisor', 'Logistics', 'Admin', 'IT', 'Management', 'Uncategorized')),
   posted_at TEXT,
+  last_verified TIMESTAMPTZ DEFAULT NOW(),
   is_active BOOLEAN DEFAULT true,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );

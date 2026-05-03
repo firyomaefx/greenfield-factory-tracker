@@ -45,20 +45,9 @@ st.markdown("""
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
-:root {
-  --green-deepest: #0d2b1d;
-  --green-forest: #1a5c32;
-  --green-emerald: #107542;
-  --green-mint: #f0faf5;
-  --green-sage: #e0f0e8;
-  --accent: #1a8a4a;
-  --text-primary: #1d1d1f;
-  --text-secondary: #86868b;
-}
-
 body {
-  background: #f0faf5;
-  color: #1d1d1f;
+  background: #f5f6f7;
+  color: #1a1a1a;
   line-height: 1.47059;
   letter-spacing: -0.022em;
 }
@@ -67,7 +56,7 @@ body {
 .main-header {
   font-size: 2.4rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #0d2b1d, #1a5c32);
+  background: linear-gradient(135deg, #0a1a11, #122b1e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -78,7 +67,7 @@ body {
 
 .sub-header {
   font-size: 1rem;
-  color: #86868b;
+  color: #6e6e73;
   font-weight: 400;
   margin-bottom: 2rem;
   letter-spacing: -0.01em;
@@ -89,31 +78,31 @@ body {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(26, 92, 50, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 18px;
   padding: 1.5rem 1.2rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 24px rgba(13, 43, 29, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
   text-align: center;
 }
 
 .kpi-box:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(13, 43, 29, 0.12);
-  border-color: rgba(26, 92, 50, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 .kpi-box h3 {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #0d2b1d;
+  color: #111111;
   margin-bottom: 0.2rem;
   letter-spacing: -0.04em;
   line-height: 1;
 }
 
 .kpi-box p {
-  color: #86868b;
+  color: #6e6e73;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -121,39 +110,36 @@ body {
 
 /* Location badges */
 .location-badge-kulim {
-  background: linear-gradient(135deg, #0d6432, #107542);
-  color: white;
+  background: #1b3b2b;
+  color: #d4e6d8;
   padding: 0.25rem 1rem;
   border-radius: 14px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  box-shadow: 0 2px 8px rgba(13, 100, 50, 0.25);
 }
 
 .location-badge-batu {
-  background: linear-gradient(135deg, #0033aa, #0055cc);
-  color: white;
+  background: #162544;
+  color: #c5d4f0;
   padding: 0.25rem 1rem;
   border-radius: 14px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  box-shadow: 0 2px 8px rgba(0, 51, 170, 0.25);
 }
 
 .location-badge-bayan {
-  background: linear-gradient(135deg, #b85c00, #d47a00);
-  color: white;
+  background: #3d2a15;
+  color: #f0dcc5;
   padding: 0.25rem 1rem;
   border-radius: 14px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  box-shadow: 0 2px 8px rgba(184, 92, 0, 0.25);
 }
 
 /* Cards */
@@ -161,37 +147,37 @@ body {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(26, 92, 50, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(13, 43, 29, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 32px rgba(13, 43, 29, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
   transform: translateY(-2px);
 }
 
 .project-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #0d2b1d;
+  color: #111111;
   letter-spacing: -0.03em;
 }
 
 /* Donation */
 .donation-box {
-  background: linear-gradient(135deg, #0d2b1d, #1a5c32, #1a8a4a);
-  color: white;
+  background: linear-gradient(135deg, #0a1a11, #122b1e, #1b3b2b);
+  color: #e8edea;
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 8px 40px rgba(13, 43, 29, 0.2);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
 }
 
 .donation-box h4 {
-  color: white;
+  color: #e8edea;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
@@ -200,7 +186,7 @@ body {
 
 .donation-box-btn {
   background: white;
-  color: #0d2b1d;
+  color: #111111;
   padding: 14px 32px;
   border-radius: 28px;
   font-weight: 700;
@@ -212,14 +198,14 @@ body {
 }
 
 .donation-box-btn:hover {
-  background: #e0f0e8;
+  background: #e5e5ea;
   transform: scale(1.03);
 }
 
 /* Tables */
 table th {
-  background: linear-gradient(135deg, #0d2b1d, #1a5c32) !important;
-  color: white !important;
+  background: #1a1a1a !important;
+  color: #f5f5f5 !important;
   font-weight: 600 !important;
   font-size: 0.85rem !important;
   padding: 0.8rem !important;
@@ -233,14 +219,14 @@ table td {
 
 /* Risk table */
 .risk-table th {
-  background: linear-gradient(135deg, #5c1010, #8b2020) !important;
-  color: white !important;
+  background: #2a1010 !important;
+  color: #f0d0d0 !important;
 }
 
 /* Buttons */
 button, .stButton > button {
-  background: linear-gradient(135deg, #1a5c32, #1a8a4a) !important;
-  color: white !important;
+  background: #1a1a1a !important;
+  color: #f5f5f5 !important;
   border: none !important;
   border-radius: 10px !important;
   font-weight: 600 !important;
@@ -249,41 +235,40 @@ button, .stButton > button {
 }
 
 button:hover, .stButton > button:hover {
-  background: linear-gradient(135deg, #0d2b1d, #1a5c32) !important;
+  background: #333333 !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(13, 43, 29, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
 .caption {
   text-align: center;
-  color: #86868b;
+  color: #6e6e73;
   font-size: 0.8rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(26, 92, 50, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background: #0a1a12;
-    color: #e8f0ec;
+    background: #0d0d0d;
+    color: #cccccc;
   }
   .kpi-box {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(26, 92, 50, 0.2);
-    color: #e8f0ec;
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.06);
   }
   .kpi-box h3 {
-    color: #c8f0d8;
+    color: #e0e0e0;
   }
   .project-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(26, 92, 50, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.06);
   }
   .project-title {
-    color: #c8f0d8;
+    color: #e0e0e0;
   }
 }
 </style>
@@ -431,43 +416,107 @@ else:
                         )
                         st.dataframe(df, hide_index=True, use_container_width=True)
 
-                if st.session_state.jobs_unlocked and USE_SUPABASE:
-                    try:
-                        jobs = get_jobs_for_company(proj["id"])
-                        if jobs:
-                            with st.expander("Active Jobs"):
-                                for job in jobs[:5]:
-                                    st.markdown(
-                                        f"[{job['title']}]({job['job_url']}) — "
-                                        f"{job.get('location', 'N/A')}"
-                                    )
-                    except Exception:
-                        pass
 
+# ---- PMP JOB LISTING ASSISTANT (Phase 2) ----
 st.divider()
-st.header("Support This Tracker")
+st.header("PMP Job Listing Assistant")
+st.caption("Factory jobs across Kulim • Batu Kawan • Bayan Lepas")
 
-donation_col1, donation_col2 = st.columns([2, 1])
-with donation_col1:
+if USE_SUPABASE:
+    try:
+        from assistants.job_assistant import get_preview, filter_jobs, CATEGORIES, ZONES, LAST_UPDATED
+    except Exception:
+        pass
+
+if not st.session_state.jobs_unlocked:
     st.markdown(
         f"""
-        <div class="donation-box">
-            <h4>Unlock Live Job Listings</h4>
-            <p style="font-size:0.95rem;opacity:0.9;margin-bottom:1.2rem;">
-                Your donation unlocks live job links from all 20+ tracked factories
-                across Kulim, Batu Kawan & Bayan Lepas
+        <div class="donation-box" style="margin: 1.5rem 0;">
+            <h4>Unlock Live Factory Job Links</h4>
+            <p style="font-size:0.92rem;opacity:0.9;margin-bottom:1rem;">
+                Your donation unlocks live job listings from <strong>all 20+ tracked factories</strong><br/>
+                across Kulim, Batu Kawan &amp; Bayan Lepas — sorted by company or job category.
             </p>
-            <a class="donation-box-btn" href="{KOFI_URL}" target="_blank">
-                Donate on Ko-fi
-            </a>
+            <a class="donation-box-btn" href="{KOFI_URL}" target="_blank">Donate on Ko-fi</a>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-with donation_col2:
-    if st.session_state.jobs_unlocked:
+    if USE_SUPABASE:
+        try:
+            preview = get_preview(unlocked=False)
+            st.subheader("Job Preview by Zone")
+            for zone in ZONES:
+                zone_companies = preview.get("by_zone", {}).get(zone, [])
+                if zone_companies:
+                    with st.expander(f"{zone} ({sum(c['job_count'] for c in zone_companies)} open jobs)"):
+                        for comp in zone_companies:
+                            st.markdown(f"- **{comp['company']}** — {comp['job_count']} positions ({comp['sector']})")
+        except Exception:
+            st.info("Job data will appear once scrapers run (coming in CI/CD pipeline).")
+
+else:
+    # ===== UNLOCKED - Full Job Assistant =====
+    job_col1, job_col2 = st.columns([3, 1])
+
+    with job_col1:
+        job_search_mode = st.radio(
+            "Filter by", ["Zone + Category", "Company", "All Jobs"],
+            horizontal=True, key="job_mode"
+        )
+
+        if job_search_mode == "Zone + Category":
+            col_z, col_c = st.columns(2)
+            with col_z:
+                sel_zone = st.selectbox("Zone", ZONES, key="job_zone")
+            with col_c:
+                try:
+                    cats = get_distinct_categories()
+                except Exception:
+                    cats = CATEGORIES
+                sel_category = st.selectbox("Category", cats, key="job_cat")
+            if st.button("Search Jobs", key="job_search_zone"):
+                result = filter_jobs(zone=sel_zone, category=sel_category, unlocked=True)
+        elif job_search_mode == "Company":
+            all_names = [c["name"] for c in all_companies]
+            sel_company = st.selectbox("Company", all_names, key="job_company_select")
+            if st.button("Search Jobs", key="job_search_company"):
+                result = filter_jobs(company=sel_company, unlocked=True)
+        else:
+            if st.button("Show All Active Jobs", key="job_search_all"):
+                result = filter_jobs(unlocked=True)
+
+    with job_col2:
         st.success("Job links active!")
+
+    if "result" in locals() and isinstance(result, dict):
+        if result.get("unlocked"):
+            st.markdown(f"**{result['count']} jobs found** — {result.get('filter', 'All')}")
+            if result.get("has_stale"):
+                st.warning("Some links need verification (older than 7 days).")
+
+            jobs_df_data = []
+            for jj in result.get("jobs", []):
+                status_icon = "⚠️" if jj.get("needs_verification") else "✅"
+                jobs_df_data.append({
+                    "Company": jj["company"],
+                    "Zone": jj["zone"],
+                    "Category": jj.get("category", ""),
+                    "Title": jj["title"],
+                    "Link": jj["url"],
+                    "Verified": status_icon,
+                })
+            if jobs_df_data:
+                st.dataframe(
+                    pd.DataFrame(jobs_df_data),
+                    column_config={"Link": st.column_config.LinkColumn("Link")},
+                    hide_index=True, use_container_width=True
+                )
+            else:
+                st.info("No active jobs match this filter — try a different category or zone.")
+
+        st.caption(f"Last updated: {result.get('last_updated', LAST_UPDATED)} | To report dead links reply /report")
 
 st.divider()
 st.header("Risk Register")

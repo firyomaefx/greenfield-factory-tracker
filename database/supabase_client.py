@@ -154,6 +154,75 @@ def deactivate_old_jobs():
     client = get_service_client()
     client.table("jobs").update({"is_active": False}).lt("created_at", "now() - interval '30 days'").eq("is_active", True).execute()
 
+# ==================== JOB ASSISTANT QUERIES (Phase 2) ====================
+
+def get_jobs_preview():
+    """Get preview counts by company (no links)."""
+    sc = get_service_client()
+    resp = sc.table("jobs").select("id, companies(name, location)").eq("is_active", True).execute()
+    preview = {}
+    for row in resp.data or []:
+        comp = row.get("companies", {})
+        name = comp.get("name", "Unknown")
+        if name not in preview:
+            preview[name] = {"count": 0, "zone": comp.get("location", "?")}
+        preview[name]["count"] += 1
+    return preview
+
+def get_jobs_by_zone(zone: str):
+    """Get all active jobs in a zone with link verification status."""
+    sc = get_service_client()
+    resp = sc.table("jobs").select("*, companies!inner(name, location)").eq("companies.location", zone).eq("is_active", True).order("created_at", desc=True).execute()
+    return _enrich_jobs(resp.data or [])
+
+def get_jobs_by_company(company_name: str):
+    """Get all active jobs for a company."""
+    sc = get_service_client()
+    resp = sc.table("jobs").select("*, companies!inner(name, location)").eq("companies.name", company_name).eq("is_active", True).order("created_at", desc=True).execute()
+    return _enrich_jobs(resp.data or [])
+
+def get_jobs_by_category(category: str):
+    """Get all active jobs in a category across zones."""
+    sc = get_service_client()
+    resp = sc.table("jobs").select("*, companies!inner(name, location)").eq("category", category).eq("is_active", True).order("created_at", desc=True).execute()
+    return _enrich_jobs(resp.data or [])
+
+def get_jobs_by_zone_and_category(zone: str, category: str):
+    """Get active jobs in a zone filtered by category."""
+    sc = get_service_client()
+    resp = sc.table("jobs").select("*, companies!inner(name, location)").eq("companies.location", zone).eq("category", category).eq("is_active", True).order("created_at", desc=True).execute()
+    return _enrich_jobs(resp.data or [])
+
+def _enrich_jobs(jobs: list) -> list:
+    """Add verification status flag to each job."""
+    from datetime import datetime, timedelta, timezone
+    now = datetime.now(timezone.utc)
+    for job in jobs:
+        verified_at = job.get("last_verified")
+        if verified_at:
+            if isinstance(verified_at, str):
+                verified_at = datetime.fromisoformat(verified_at.replace("Z", "+00:00"))
+            job["needs_verification"] = (now - verified_at) > timedelta(days=7)
+        else:
+            job["needs_verification"] = True
+    return jobs
+
+def get_distinct_categories():
+    """Get list of available categories that have active jobs."""
+    sc = get_service_client()
+    resp = sc.table("jobs").select("category").eq("is_active", True).execute()
+    cats = set()
+    for row in resp.data or []:
+        c = row.get("category", "")
+        if c and c != "Uncategorized":
+            cats.add(c)
+    return sorted(cats)
+
+def update_job_verification(job_id: str):
+    """Update the last_verified timestamp for a job."""
+    sc = get_service_client()
+    sc.table("jobs").update({"last_verified": "now()"}).eq("id", job_id).execute()
+
 # ==================== DONATION / UNLOCK SYSTEM ====================
 
 def generate_unlock_code(length: int = 8) -> str:

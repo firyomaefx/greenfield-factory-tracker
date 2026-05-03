@@ -3,7 +3,7 @@
 **PMP Portfolio Dashboard — Kulim, Batu Kawan & Bayan Lepas (2025–2028)**
 
 [![Scrape Pipeline](https://github.com/firyomaefx/greenfield-factory-tracker/actions/workflows/scrape.yml/badge.svg)](https://github.com/firyomaefx/greenfield-factory-tracker/actions/workflows/scrape.yml)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Live-brightgreen)](https://greenfield-factory-tracker.streamlit.app)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Live-brightgreen)](https://malaysia-factory-tracker.streamlit.app)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-orange)](https://ko-fi.com/greenfieldtrackerbypedot)
 
 ---
@@ -12,7 +12,7 @@
 
 | Deployment | URL |
 |------------|-----|
-| **Streamlit Cloud** | [greenfield-factory-tracker.streamlit.app](https://greenfield-factory-tracker.streamlit.app) |
+| **Streamlit Cloud** | [malaysia-factory-tracker.streamlit.app](https://malaysia-factory-tracker.streamlit.app) |
 | **Supabase DB** | [qoncvdcyypwhogrqzesm.supabase.co](https://qoncvdcyypwhogrqzesm.supabase.co) |
 | **Ko-fi Donation** | [ko-fi.com/greenfieldtrackerbypedot](https://ko-fi.com/greenfieldtrackerbypedot) |
 
@@ -24,7 +24,7 @@
 Double-click `Greenfield_Dashboard.html` — opens in any browser. All 20 projects, filters, milestones, risk register, and action items. **Apple-inspired "Amazing Green" UI theme.**
 
 ### Method B: Streamlit Cloud
-Visit: [https://greenfield-factory-tracker.streamlit.app](https://greenfield-factory-tracker.streamlit.app)
+Visit: [https://malaysia-factory-tracker.streamlit.app](https://malaysia-factory-tracker.streamlit.app)
 
 ### Method C: Local Streamlit (Supabase-backed)
 ```bash
